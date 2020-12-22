@@ -1,22 +1,33 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import Cupcake from '../images/cupcake.jpg';
+import SEO from '../components/seo';
+import styled from 'styled-components';
+import ImageGrid from '../components/imagegrid';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const Hero = styled.div`
+  background-image: url(${Cupcake});
+  background-position: left center;
+  height: 538px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  margin-bottom: 70px;
+  h1 {
+    color: var(--white);
+    padding: 1rem;
+    font-size: 60px;
+  }
+`;
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+    <Hero>
+      <h1>Delicious Treats, Made Fresh to Order</h1>
+    </Hero>
+    <ImageGrid />
+  </>
+);
 
-export default IndexPage
+export default IndexPage;
