@@ -8,15 +8,18 @@ const GlobalStyles = createGlobalStyle`
         --white: #FFFFFF;
         --pink: #FDE6F0;
     }
+
     p, a {
         color: var(--brown);
     }
     h1,h2,h3,h4,h5 {
         color: var(--brown);
-        font-size: 
     }
     h2 {
         font-size: 48px;
+    }
+    p {
+        font-size: 20px;
     }
 
 `;

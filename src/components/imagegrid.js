@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   min-height: 620px;
+  margin-bottom: 70px;
 `;
 
 const ImageGridWrapper = styled.div`

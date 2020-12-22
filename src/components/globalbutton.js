@@ -9,6 +9,7 @@ const Button = styled.button`
   height: 42px;
   width: 127px;
   transition: 250ms;
+  font-size: 24px;
   &:hover {
     cursor: pointer;
     background-color: var(--darkerBlue);
