@@ -6,7 +6,7 @@ import ImageGrid from '../components/imagegrid';
 
 const Hero = styled.div`
   background-image: url(${Cupcake});
-  background-position: left center;
+  background-position: center;
   height: 538px;
   border-radius: 10px;
   display: grid;

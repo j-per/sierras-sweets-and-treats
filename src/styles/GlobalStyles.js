@@ -13,6 +13,10 @@ const GlobalStyles = createGlobalStyle`
     }
     h1,h2,h3,h4,h5 {
         color: var(--brown);
+        font-size: 
+    }
+    h2 {
+        font-size: 48px;
     }
 
 `;

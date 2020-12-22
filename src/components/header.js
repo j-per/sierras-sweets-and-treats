@@ -28,6 +28,7 @@ const Nav = styled.nav`
   }
   li {
     font-size: 24px;
+    text-align: center;
     font-weight: bold;
     padding-right: 50px;
     &:last-child {
@@ -38,7 +39,7 @@ const Nav = styled.nav`
 `;
 
 const Image = styled.img`
-  height: 90px;
+  height: 110px;
   width: auto;
 `;
 
