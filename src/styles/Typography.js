@@ -16,6 +16,9 @@ const Typography = createGlobalStyle`
         font-weight: bold;
         margin: 0;
     }
+    h1, h2 {
+        line-height: 3.5rem;
+    }
     a {
         text-decoration-color: var(--brown);
         text-decoration: none;

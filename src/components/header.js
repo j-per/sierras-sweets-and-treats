@@ -6,6 +6,33 @@ import GlobalButton from '../components/globalbutton';
 import { slide as Menu } from 'react-burger-menu';
 import MobileNav from '../components/mobilenav';
 
+const Header = ({ siteTitle }) => (
+  <HeaderWrapper>
+    <MobileNav />
+    <Nav>
+      <ul>
+        <li>
+          <Link to="/">
+            <Image src={Logo} />
+          </Link>
+        </li>
+        <li>
+          <Link to="/gallery">Gallery</Link>
+        </li>
+        <li>
+          <Link to="/menu">Menu</Link>
+        </li>
+        <li>
+          <Link to="/order">Order</Link>
+        </li>
+        <li>
+          <GlobalButton textContent="Contact" />
+        </li>
+      </ul>
+    </Nav>
+  </HeaderWrapper>
+);
+
 const HeaderWrapper = styled.header`
   margin: 1.45rem 0;
   height: 90px;
@@ -39,35 +66,8 @@ const Nav = styled.nav`
 `;
 
 const Image = styled.img`
-  height: 110px;
+  height: 100px;
   width: auto;
 `;
-
-const Header = ({ siteTitle }) => (
-  <HeaderWrapper>
-    <MobileNav />
-    <Nav>
-      <ul>
-        <li>
-          <Link to="/">
-            <Image src={Logo} />
-          </Link>
-        </li>
-        <li>
-          <Link to="/gallery">Gallery</Link>
-        </li>
-        <li>
-          <Link to="/menu">Menu</Link>
-        </li>
-        <li>
-          <Link to="/order">Order</Link>
-        </li>
-        <li>
-          <GlobalButton textContent="Contact" />
-        </li>
-      </ul>
-    </Nav>
-  </HeaderWrapper>
-);
 
 export default Header;

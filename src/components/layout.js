@@ -12,6 +12,7 @@ import GlobalStyles from '../styles/GlobalStyles';
 import Typography from '../styles/Typography';
 
 import Header from './header';
+import Footer from './footer';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -37,11 +38,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        ></footer>
+        <Footer />
       </div>
     </>
   );
