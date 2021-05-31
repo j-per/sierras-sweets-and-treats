@@ -8,6 +8,8 @@ import TestimonialCard from '../components/testimonialcard';
 import WavesDivider from '../components/wavesDivider';
 import TreatCard from '../components/treatcard';
 
+import cupcakeimage from '../images/cupcake.jpg'
+
 const IndexPage = () => {
   // const treats = ["Cakes", "Cupcakes", "Macaroons", "Cinnamon Rolls", "Cookies", "Rice Krispy Treats", "Dipped Pretzels"];
   // const [count, setCount] = useState(0);
@@ -41,32 +43,13 @@ const IndexPage = () => {
       </div>
     </AboutStyles>
     <OfferStyles>
-      <div className="offerstyles_section">
-        <div>
-          <img src="https://picsum.photos/400/300?random=6" />
-        </div>
-        <div className="offerstyles_text">
-          <h3>Cupcakes</h3>
-          <p>Here is a blurb about how we make the cupcakes and how delicious they are</p>
-        </div>
+      <div className="offerstyles_image">
+        <img src={cupcakeimage} />
       </div>
-      <div className="offerstyles_section">
-        <div>
-          <img src="https://picsum.photos/400/300?random=6" />
-        </div>
-        <div className="offerstyles_text">
-          <h3>Cupcakes</h3>
-          <p>Here is a blurb about how we make the cupcakes and how delicious they are</p>
-        </div>
-      </div>
-      <div className="offerstyles_section">
-        <div>
-          <img src="https://picsum.photos/400/300?random=6" />
-        </div>
-        <div className="offerstyles_text">
-          <h3>Cupcakes</h3>
-          <p>Here is a blurb about how we make the cupcakes and how delicious they are</p>
-        </div>
+      <div className="offerstyles_text">
+        <h3>Cupcakes</h3>
+        <p>A delicious flavorful strawberry explosion cupcake that will melt in your mouth. Get them before they run out! Here is some more information about the cupakes that users can read.</p>
+        <GlobalButton textContent="Order" />
       </div>
     </OfferStyles>
     <TestimonialStyles>
@@ -154,24 +137,38 @@ const AboutStyles = styled.section`
 `;
 
 const OfferStyles = styled.section`
-  border-radius: 5px;
-  padding: 1rem 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 50px);
   margin-bottom: 50px;
-  .offerstyles_section{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    .offerstyles_text {
-      padding: 1rem;
-      border-radius: 5px;
-      background: white;
+  .offerstyles_text {
+    grid-column: 4 / 9;
+    grid-row-start: 1;
+    height: 350px;
+    background: var(--pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem 1rem 1rem 8rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    p {
+      line-height: 1.5;
     }
+  }
+  .offerstyles_image {
+    grid-column: 2 / 5;
+    grid-row: 2 / 7;
+    z-index: 1;
+    padding-top: 20%;
+  }
     img {
     border-radius: 5px;
+    height: 100%;
     }
     h3 {
       font-size: 30px;
-      color: var(--lightBlue);
     }
   }
 `;
